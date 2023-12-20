@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate") %> <%= success %>
+<body>
+  <h3>Lists :- </h3>
+  <form method="GET" action="/list/new">
+    <button>Create New Listing</button>
+  </form>
+  <ul class="needs-validation" novalidate>
+    <% for(let listing of allListing) {%> <% if(currUser &&
+    currUser.equals(listing.owner)) {%>
+    <li><a href="/list/<%= listing._id %>"><%= listing.title %></a></li>
+    <% } %>
+    <br />
+    <br />
+    <% } %>
+  </ul>
+</body>

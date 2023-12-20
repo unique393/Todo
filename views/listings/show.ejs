@@ -1,0 +1,15 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <ul>
+    <li> <%= list.title %> </li>
+    <li> <%= list.owner.username %> </li>
+  </ul>
+  <br />
+  <% if(currUser && currUser._id.equals(list.owner._id)) {%>
+  <a href="/list/<%= list._id %>/edit">Edit</a>
+  <br /><br />
+  <form method="POST" action="/list/<%= list._id %>?_method=DELETE">
+    <button>Delete</button>
+  </form>
+  <% } %>
+</body>

@@ -1,0 +1,22 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <h3>Add new list</h3>
+  <form
+    method="POST"
+    action="/list"
+    class="row g-3 needs-validation"
+    novalidate
+  >
+    <label for="title" class="form-label">Title</label>
+    <textarea
+      name="list[title]"
+      placeholder="Your List"
+      type="text"
+      class="form-control"
+      required
+    ></textarea>
+    <div class="invalid-feedback"> Please write Something. </div>
+    <br />
+    <button>Add</button>
+  </form>
+</body>

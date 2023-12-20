@@ -1,0 +1,11 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <h3>Edit list</h3>
+  <form method="POST" action="/list/<%= list._id %>?_method=PUT">
+    <textarea name="list[title]" value="<%= list.title %>" type="text">
+<%= list.title %></textarea
+    >
+    <br />
+    <button>Edit</button>
+  </form>
+</body>

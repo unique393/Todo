@@ -1,0 +1,13 @@
+body {
+  background-color: bisque;
+  text-align: center !important;
+}
+
+.icon-1 {
+  color: maroon;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
